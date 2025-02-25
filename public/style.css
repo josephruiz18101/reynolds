@@ -187,7 +187,14 @@ button {
     border: 1px solid white;
     text-align: center;
 }
-
+.bottom-image {
+    width: 100%;
+    max-width: 800px; /* Limit the max size */
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
@@ -216,6 +223,9 @@ button {
 
     button, a {
         font-size: 1em;
+    }
+    .bottom-image {
+        max-width: 90%; /* Reduce size on mobile */
     }
 }
 
