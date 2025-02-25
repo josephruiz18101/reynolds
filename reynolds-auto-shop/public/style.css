@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('reynoldsbackground.PNG') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+.container{
+    margin-top: 50px; /* Adjusted to show more of the background */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header img {
+    max-width: 350px;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+.services, .contact {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+#p2 {
+font-size: 50px;
+}
+.description {
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 200%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 35px;
+    margin: 5px 0;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+}
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.icon {
+    width: 90px;
+    height: 75px;
+}
+
+form input {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.cart {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#shoptx {
+    font-size: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Gallery Section */
+.gallery {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.photo-section {
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    flex: 1 1 45%;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.photo-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.photo-item img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .photo-container {
+        flex-direction: column;
+    }
+    .photo-item {
+        flex: 1 1 100%;
+    }
+}
+/* Checkout Page Styles */
+.checkout-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+}
+
+.checkout-container input,
+.checkout-container button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+#payment-element {
+    margin: 20px 0;
+}
+
+#payment-message {
+    color: red;
+    margin-top: 10px;
+}
+
+button#submit {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+/* Admin Page Styles */
+.admin-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    color: white;
+}
+
+#order-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#order-management th, #order-management td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#order-management button {
+    background-color: #FFD700;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+/* Login Page Styles */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    color: white;
+}
+
+.login-container input,
+.login-container button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.login-container button {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container p a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Register Page Styles */
+.register-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    color: white;
+}
+
+.register-container input,
+.register-container button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.register-container button {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-container p a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Cart Page Styles */
+.cart-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+}
+
+.cart-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-container button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+}
+
+.cart-container a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+#location {
+    height: 500px;
+    width: 500px;
+}

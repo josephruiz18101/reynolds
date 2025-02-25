@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/photos">Photos</a></li>
+            <li><a href="/checkout">Checkout</a></li>
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/userOrders">My Orders</a></li>
+            <li><a href="/cart"><img src="/carticon.webp" alt="Cart" class="icon"></a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h2>Admin Dashboard</h2>
+        
+        <section id="order-management">
+            <h3>Manage Orders</h3>
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>User</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <!-- Orders will be dynamically loaded -->
+            </table>
+        </section>
+    </div>
+
+    <script>
+        async function loadOrders() {
+            const res = await fetch('/admin/orders');
+            const orders = await res.json();
+
+            const table = document.querySelector('#order-management table');
+            orders.forEach(order => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order._id}</td>
+                    <td>${order.user.name}</td>
+                    <td>$${order.total}</td>
+                    <td>${order.status}</td>
+                    <td>
+                        <button onclick="updateStatus('${order._id}', 'Shipped')">Mark as Shipped</button>
+                    </td>
+                `;
+                table.appendChild(row);
+            });
+        }
+
+        async function updateStatus(orderId, status) {
+            await fetch(`/admin/orders/${orderId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ status })
+            });
+            location.reload();
+        }
+
+        loadOrders();
+    </script>
+</body>
+</html>
