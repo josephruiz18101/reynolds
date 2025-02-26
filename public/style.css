@@ -20,7 +20,7 @@ header {
 }
 
 header img {
-    max-width: 100%;
+    max-width: 25%;
     height: auto;
 }
 
@@ -175,6 +175,27 @@ button:hover {
     margin: 10px 0;
     font-size: 1.5em;
 }
+/* Bottom Image Container */
+.bottom-image-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Bottom Image Styles */
+.bottom-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Limit the image height */
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 10px 0;
+}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -198,6 +219,6 @@ button:hover {
         padding: 10px;
     }
     .bottom-image {
-        max-height: 250px;
+        max-height: 200px; /* Smaller height on mobile */
     }
 }
