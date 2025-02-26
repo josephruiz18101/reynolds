@@ -19,9 +19,19 @@ header {
     border-radius: 10px;
 }
 
+/* Logo Image Styles */
 header img {
-    max-width: 100%;
+    max-width: 250px; /* Limit the maximum width */
     height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Mobile Styles for Logo */
+@media (max-width: 768px) {
+    header img {
+        max-width: 150px; /* Smaller size on mobile */
+    }
 }
 
 header h1 {
@@ -138,32 +148,29 @@ button {
 }
 
 /* Shop Container */
-.shop-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.shop-container, .photo-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.product {
+.product, .photo-item {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
-
-.product img {
+/* Responsive Images */
+.photo-item img, header img {
     max-width: 100%;
-    height: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Mobile Styles */
@@ -171,15 +178,27 @@ button {
     nav ul {
         flex-direction: column;
     }
+    
     nav li {
         margin: 5px 0;
     }
+
     header h1 {
         font-size: 1.5em;
     }
+
     #p2 {
         font-size: 1.2em;
     }
+
+    .product, .photo-item {
+        flex: 1 1 100%;
+    }
+
+    .photo-container, .shop-container {
+        flex-direction: column;
+    }
+
     button, a {
         font-size: 1em;
     }
