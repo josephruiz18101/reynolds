@@ -138,101 +138,48 @@ button {
 }
 
 /* Shop Container */
-.shop-container, .photo-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.product, .photo-item {
+.product {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    margin: 10px;
     border-radius: 10px;
     text-align: center;
-    width: 100%;
-    max-width: 300px;
-    box-sizing: border-box;
-}
-
-/* Responsive Images */
-.photo-item img, header img {
-    max-width: 100%;
-    border-radius: 10px;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Checkout Page */
-#payment-element {
-    margin: 20px 0;
-}
-
-#payment-message {
-    color: red;
-    margin-top: 10px;
-}
-
-/* Admin Table */
-#order-management table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    overflow-x: auto;
-}
-
-#order-management th, #order-management td {
-    padding: 10px;
-    border: 1px solid white;
-    text-align: center;
-}
-/* Bottom Image Container */
-.bottom-image-container {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Bottom Image Styles */
-.bottom-image {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Limit the image height */
-    object-fit: contain;
-    border-radius: 10px;
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
-    
     nav li {
         margin: 5px 0;
     }
-
     header h1 {
         font-size: 1.5em;
     }
-
     #p2 {
         font-size: 1.2em;
     }
-
-    .product, .photo-item {
-        flex: 1 1 100%;
-    }
-
-    .photo-container, .shop-container {
-        flex-direction: column;
-    }
-
     button, a {
         font-size: 1em;
     }
@@ -241,7 +188,6 @@ button {
         padding: 10px;
     }
     .bottom-image {
-        max-height: 250px; /* Smaller height on mobile */
+        max-height: 250px;
     }
 }
-
