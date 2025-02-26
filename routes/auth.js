@@ -16,6 +16,11 @@ router.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', 'login.html'));
 });
 
+// Serve My Orders Page
+router.get('/userOrders', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views', 'myOrders.html'));
+});
+
 // Registration Route
 router.post('/register', async (req, res) => {
     const { name, email, password, password2 } = req.body;
@@ -59,4 +64,3 @@ router.get('/logout', (req, res, next) => {
 });
 
 module.exports = router;
-
