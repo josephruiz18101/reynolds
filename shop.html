@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shop</title>
-    <link rel="stylesheet" href="public/style.css">
-    <script src="public/script.js" defer></script>
+    <title>Shop - Reynolds Small Engine & Auto</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="/public/script.js" defer></script>
 </head>
 <body>
     <nav>
@@ -17,10 +17,46 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
             <li><a href="/userOrders">My Orders</a></li>
-            <li><a href="/cart"><img src="public/carticon.webp" alt="Cart" class="icon">Cart</a></li>
+            <li><a href="/cart"><img src="/public/carticon.webp" alt="Cart" class="icon"> Cart</a></li>
         </ul>
     </nav>
-    <h2 id="shoptx">Merchandise!!!</h2>
-  <p id="shoptx">Coming soon!!!</p>
+
+    <header>
+        <h1>Shop Our Merchandise</h1>
+    </header>
+
+    <div class="shop-container">
+        <div class="product">
+            <img src="/public/reynoldsshirt.webp" alt="Product 1" class="product-image">
+            <h2>Shirt</h2>
+            <p>$20.00</p>
+            <button onclick="addToCart(1, 'Product 1', 20)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="/public/reynoldshat.webp" alt="Product 2" class="product-image">
+            <h2>Hat</h2>
+            <p>$10.00</p>
+            <button onclick="addToCart(2, 'Product 2', 30)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="/public/placeholder.png" alt="Product 3" class="product-image">
+            <h2>Product 3</h2>
+            <p>$25.00</p>
+            <button onclick="addToCart(3, 'Product 3', 25)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="/public/placeholder.png" alt="Product 4" class="product-image">
+            <h2>Product 4</h2>
+            <p>$15.00</p>
+            <button onclick="addToCart(4, 'Product 4', 15)">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Reynolds Small Engine & Auto</p>
+    </footer>
 </body>
 </html>
