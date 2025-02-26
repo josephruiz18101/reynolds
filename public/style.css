@@ -19,19 +19,9 @@ header {
     border-radius: 10px;
 }
 
-/* Logo Image Styles */
 header img {
-    max-width: 250px; /* Limit the maximum width */
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    object-fit: contain;
-}
-
-/* Mobile Styles for Logo */
-@media (max-width: 768px) {
-    header img {
-        max-width: 150px; /* Smaller size on mobile */
-    }
 }
 
 header h1 {
@@ -167,12 +157,56 @@ button {
 
 /* Responsive Images */
 .photo-item img, header img {
-    max-width: 100%;
+    max-width: 25%;
     border-radius: 10px;
     height: auto;
     object-fit: cover;
 }
 
+/* Checkout Page */
+#payment-element {
+    margin: 20px 0;
+}
+
+#payment-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Admin Table */
+#order-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    overflow-x: auto;
+}
+
+#order-management th, #order-management td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+}
+/* Bottom Image Container */
+.bottom-image-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Bottom Image Styles */
+.bottom-image {
+    width: 100%;
+    height: auto;
+    max-height: 650px; /* Limit the image height */
+    object-fit: contain;
+    border-radius: 10px;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
@@ -207,6 +241,7 @@ button {
         padding: 10px;
     }
     .bottom-image {
-        max-height: 250px;
+        max-height: 250px; /* Smaller height on mobile */
     }
 }
+
