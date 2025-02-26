@@ -21,6 +21,7 @@ router.get('/userOrders', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', 'myOrders.html'));
 });
 
+
 // Registration Route
 router.post('/register', async (req, res) => {
     const { name, email, password, password2 } = req.body;
