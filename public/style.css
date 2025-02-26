@@ -23,6 +23,13 @@ header img {
     max-width: 100%;
     height: auto;
 }
+/* Logo Styling */
+.header-image {
+    max-width: 500px; /* Set a maximum width */
+    height: auto;
+    margin: 20px auto;
+}
+
 
 header h1 {
     margin: 10px 0;
@@ -46,7 +53,63 @@ header h1 {
     margin-right: auto;
     box-sizing: border-box;
 }
+/* Orders Container */
+.orders-container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white;
+}
 
+/* Order List Styling */
+#order-list {
+    margin-top: 20px;
+}
+
+/* No Orders Text */
+#order-list p {
+    font-size: 1.2em;
+    color: #FFD700;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+/* Individual Order Item */
+.order-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+}
+
+.order-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #FFD700;
+}
+
+.order-item p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Hover Effect */
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
 /* Typography */
 #p2 {
     font-size: 2em;
@@ -57,6 +120,7 @@ header h1 {
 .contact {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
+    font-size: 25px;
     margin: 20px;
     border-radius: 10px;
 }
@@ -145,14 +209,66 @@ button {
 }
 
 /* Shop Container */
-.shop-container,
+.shop-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
 .photo-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.product,
+.product{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Product Image */
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Product Text */
+.product h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #FFD700;
+}
+
+.product p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Button */
+.product button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #e0c700;
+}
+
 .photo-item {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
@@ -240,14 +356,18 @@ header img {
         font-size: 1.2em;
     }
 
-    .product,
+    .product{
+        margin: 10px 0; 
+    }
     .photo-item {
         flex: 1 1 100%;
     }
 
-    .photo-container,
-    .shop-container {
+    .photo-container{
         flex-direction: column;
+    }
+    .shop-container {
+        grid-template-columns: 1fr;
     }
 
     button,
@@ -263,5 +383,21 @@ header img {
     .bottom-image {
         max-height: 250px;
         /* Smaller height on mobile */
+    }
+    .orders-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .order-item {
+        padding: 15px;
+    }
+
+    .order-item h3 {
+        font-size: 1.2em;
+    }
+
+    .order-item p {
+        font-size: 1em;
     }
 }
