@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/photos">Photos</a></li>
+            <li><a href="/checkout">Checkout</a></li>
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/userOrders">My Orders</a></li>
+            <li><a href="/cart"><img src="/public/carticon.webp" alt="Cart" class="icon"></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>My Orders</h1>
+    </header>
+
+    <div class="orders-container">
+        <h2>Your Orders</h2>
+        <div id="order-list">
+            <p>No order information available.</p>
+        </div>
+    </div>
+
+    <script>
+        async function loadOrders() {
+            try {
+                const res = await fetch('/order/user');
+                const orders = await res.json();
+                const orderList = document.getElementById('order-list');
+                orderList.innerHTML = '';
+
+                if (orders.length === 0) {
+                    orderList.innerHTML = '<p>No order information available.</p>';
+                } else {
+                    orders.forEach(order => {
+                        const orderElement = document.createElement('div');
+                        orderElement.className = 'order-item';
+                        orderElement.innerHTML = `
+                            <h3>Order ID: ${order._id}</h3>
+                            <p>Status: ${order.status}</p>
+                            <p>Total: $${order.total}</p>
+                        `;
+                        orderList.appendChild(orderElement);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading orders:', error);
+            }
+        }
+        window.onload = loadOrders;
+    </script>
+</body>
+</html>
