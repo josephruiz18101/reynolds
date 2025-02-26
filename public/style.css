@@ -81,7 +81,67 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
 }
+/* Photos Page Styles */
+.gallery {
+    padding: 20px;
+    max-width: 1600px; /* Increased container width */
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
+.gallery .photo-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery .photo-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* Before & After Image Container */
+.gallery .photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image Cards */
+.gallery .photo-item {
+    flex: 1 1 45%;
+    max-width: 700px; /* Force larger width */
+    background-color: rgba(0, 0, 0, 0.993);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.gallery .photo-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery .photo-item h4 {
+    font-size: 1.8em;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Larger Images */
+.gallery .photo-item img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 600px; /* Force double size */
+    height: 100%;
+    object-fit: cover;
+}
 /* Individual Order Item */
 .order-item {
     background-color: rgba(0, 0, 0, 0.6);
@@ -369,7 +429,18 @@ header img {
     .shop-container {
         grid-template-columns: 1fr;
     }
-
+    .gallery .photo-container {
+        flex-direction: column;
+        gap: 10px; /* Add space between items on mobile */
+    }
+    
+    .gallery .photo-item {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    .gallery .photo-item img {
+        max-height: 400px; /* Adjust for mobile */
+    }
     button,
     a {
         font-size: 1em;
