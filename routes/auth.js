@@ -18,7 +18,7 @@ router.get('/login', (req, res) => {
 
 // Serve My Orders Page
 router.get('/userOrders', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views', 'myOrders.html'));
+    res.sendFile(path.join(__dirname, '../views', 'userOrders.html'));
 });
 
 
