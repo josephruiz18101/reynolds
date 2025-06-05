@@ -397,7 +397,14 @@ header img {
     object-fit: contain;
     border-radius: 10px;
 }
-
+#whatweservice{
+ width: 100%;
+    height: auto;
+    max-height: 1000px;
+    /* Limit the image height */
+    object-fit: contain;
+    border-radius: 20px;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
